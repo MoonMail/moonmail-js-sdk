@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1587458605865" clover="3.2.0">
+  <project timestamp="1587458605865" name="All files">
+    <metrics statements="25" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="7" elements="39" coveredelements="33" complexity="0" loc="25" ncloc="25" packages="1" files="3" classes="3"/>
+    <file name="index.ts" path="/Users/ruben/Git/moonmail-js-sdk/src/index.ts">
+      <metrics statements="13" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+    </file>
+    <file name="types.ts" path="/Users/ruben/Git/moonmail-js-sdk/src/types.ts">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+    <file name="utils.ts" path="/Users/ruben/Git/moonmail-js-sdk/src/utils.ts">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
