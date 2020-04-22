@@ -1,0 +1,30 @@
+{
+  "name": "moonmail-js-sdk",
+  "version": "1.0.0",
+  "author": "Dmitriy Nevzorov",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/sdk.js",
+  "module": "dist/sdk.module.js",
+  "unpkg": "dist/sdk.umd.js",
+  "amdName": "MoonMail",
+  "mangle": {
+    "regex": "^_"
+  },
+  "scripts": {
+    "build": "microbundle --external none --define API_HOST=$API_HOST",
+    "dev": "microbundle watch --external none --define API_HOST=https://7qjdnpf4vc.execute-api.eu-west-1.amazonaws.com/dev",
+    "test": "jest --silent",
+    "test:coverage": "jest --collect-coverage --silent"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "microbundle": "^0.11.0",
+    "ts-jest": "^25.4.0",
+    "jest": "^25.4.0"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "isomorphic-unfetch": "^3.0.0"
+  }
+}

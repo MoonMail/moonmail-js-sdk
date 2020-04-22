@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sdk should triggerEvent 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "post",
+      "events",
+      Object {
+        "Contact": Object {
+          "Address": "email@example.com",
+        },
+        "Events": Array [
+          Object {
+            "EventType": "TestEvent",
+          },
+        ],
+      },
+    ],
+    Array [
+      "post",
+      "events",
+      Object {
+        "Contact": Object {
+          "Address": "email@example.com",
+        },
+        "Events": Array [
+          Object {
+            "EventType": "TestEvent",
+          },
+        ],
+      },
+    ],
+    Array [
+      "post",
+      "events",
+      Object {
+        "Contact": Object {
+          "Address": "email@example.com",
+        },
+        "Events": Array [
+          Object {
+            "EventType": "TestEvent1",
+          },
+          Object {
+            "EventType": "TestEvent2",
+          },
+        ],
+      },
+    ],
+    Array [
+      "post",
+      "events",
+      Object {
+        "Contact": Object {
+          "Address": "email@example.com",
+        },
+        "Events": Array [
+          Object {
+            "EventType": "TestEvent1",
+          },
+          Object {
+            "EventType": "TestEvent2",
+          },
+        ],
+      },
+    ],
+    Array [
+      "post",
+      "events",
+      Object {
+        "Contact": Object {
+          "Address": "email@example.com",
+        },
+        "Events": Array [
+          Object {
+            "Attributes": Object {
+              "foo": "bar",
+            },
+            "EventType": "TestEvent",
+            "Metrics": Object {
+              "count": 1,
+            },
+          },
+        ],
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`sdk should updateContact 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "post",
+      "contacts",
+      Object {
+        "Address": "email@example.com",
+        "Attributes": Object {
+          "foo": "bar",
+        },
+        "Metrics": Object {
+          "count": 1,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
