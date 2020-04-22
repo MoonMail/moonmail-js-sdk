@@ -25,8 +25,9 @@ jobs:
           restore-keys: |
             nodeModules-
             
-      - name: get-npm-version
-        uses: martinbeentjes/npm-get-version-action@master
+      - name: Read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
         
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -52,4 +53,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: 'dist'
-          DEST_DIR: sdk/${{ steps.get-npm-version.outputs.current-version}}
+          DEST_DIR: 'sdk/${{ steps.package-version.outputs.version }}'
