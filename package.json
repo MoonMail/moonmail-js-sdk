@@ -4,6 +4,9 @@
   "description": "MoonMail JS SDK",
   "author": "Dmitriy Nevzorov",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/microapps/moonmail-js-sdk"
+  },
   "source": "src/index.ts",
   "main": "dist/moonmail.js",
   "module": "dist/moonmail.module.js",
