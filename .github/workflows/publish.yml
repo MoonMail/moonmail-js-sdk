@@ -54,3 +54,12 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: 'dist'
           DEST_DIR: 'sdk/${{ steps.package-version.outputs.version }}'
+          
+      - name: Invalidate CloudFront
+        uses: awact/cloudfront-action@master
+        env:
+          SOURCE_PATH: './sdk'
+          AWS_REGION: 'us-east-1'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}

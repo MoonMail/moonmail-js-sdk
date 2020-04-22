@@ -1,12 +1,14 @@
 {
   "name": "moonmail-js-sdk",
   "version": "1.0.4",
+  "description": "MoonMail JS SDK",
   "author": "Dmitriy Nevzorov",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/moonmail.js",
   "module": "dist/moonmail.module.js",
   "unpkg": "dist/moonmail.umd.js",
+  "types": "dist/index.d.ts",
   "amdName": "MoonMail",
   "mangle": {
     "regex": "^_"
@@ -41,7 +43,7 @@
     },
     "hooks": {
       "before:init": [
-        "CI=true yarn test"
+        "yarn test"
       ]
     }
   }
