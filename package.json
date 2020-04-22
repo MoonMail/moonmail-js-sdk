@@ -4,27 +4,44 @@
   "author": "Dmitriy Nevzorov",
   "license": "MIT",
   "source": "src/index.ts",
-  "main": "dist/sdk.js",
-  "module": "dist/sdk.module.js",
-  "unpkg": "dist/sdk.umd.js",
+  "main": "dist/moonmail.js",
+  "module": "dist/moonmail.module.js",
+  "unpkg": "dist/moonmail.umd.js",
   "amdName": "MoonMail",
   "mangle": {
     "regex": "^_"
   },
   "scripts": {
-    "build": "microbundle --external none --define API_HOST=$API_HOST",
-    "dev": "microbundle watch --external none --define API_HOST=https://7qjdnpf4vc.execute-api.eu-west-1.amazonaws.com/dev",
-    "test": "jest --silent",
-    "test:coverage": "jest --collect-coverage --silent"
+    "build": "microbundle --external none",
+    "dev": "microbundle watch --external none",
+    "test": "jest",
+    "prepare": "yarn run build",
+    "release": "release-it"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "microbundle": "^0.11.0",
     "ts-jest": "^25.4.0",
-    "jest": "^25.4.0"
-  },
-  "dependencies": {
+    "jest": "^25.4.0",
     "deepmerge": "^4.2.2",
     "isomorphic-unfetch": "^3.0.0"
+  },
+  "dependencies": {},
+  "release-it": {
+    "git": {
+      "tagName": "v${version}",
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "before:init": [
+        "CI=true yarn test"
+      ]
+    }
   }
 }
