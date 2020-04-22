@@ -68,9 +68,9 @@ jobs:
           DEST_DIR: 'sdk/latest'
           
       - name: Invalidate CloudFront
-        uses: awact/cloudfront-action@master
+        uses: chetan/invalidate-cloudfront-action@master
         env:
-          SOURCE_PATH: './sdk/latest'
+          PATHS: '/sdk/latest'
           AWS_REGION: 'us-east-1'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
