@@ -1,4 +1,5 @@
 import 'isomorphic-unfetch';
+import {Exception} from './Exception';
 import {Config, Contact, Event} from './types';
 import {merge, transferKeyToLowerCase, transferKeyToUpperCase} from './utils';
 
@@ -26,12 +27,21 @@ export default class MoonMail {
     if (!event.eventType) throw new Error('Please provide eventType');
   }
 
+  static async handleErrors(res: Response) {
+    const data = await res.json();
+    if (!res.ok) {
+      if (data.status) throw new Exception(data);
+      throw new Exception({statusCode: res.status, message: res.statusText});
+    }
+    return data;
+  }
+
   request(method: string, path: string, data: Record<string, any>) {
     return fetch(`${API_HOST}/${this._config.accountId}/${path}`, {
       method: method,
       body: JSON.stringify(data),
-      headers: {'Content-Type': 'application/json'}
-    }).then(res => res.json());
+      headers: {'Content-Type': 'application/json'},
+    }).then(MoonMail.handleErrors);
   }
 
   configure(config: Config) {
@@ -66,7 +76,7 @@ export default class MoonMail {
   async triggerEvent(event: Event | Event[] | string | string[], contact?: Contact) {
     let eventsData: Record<string, any>[];
     if (Array.isArray(event)) {
-      eventsData = (event as Event[]).map(event => this._buildEventData(event));
+      eventsData = (event as Event[]).map((event) => this._buildEventData(event));
     } else {
       eventsData = [this._buildEventData(event)];
     }
