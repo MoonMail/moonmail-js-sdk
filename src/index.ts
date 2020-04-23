@@ -45,8 +45,9 @@ export default class MoonMail {
   }
 
   configure(config: Config) {
-    MoonMail.validateConfig(config);
-    this._config = config;
+    const newConfig = {...this._config, ...config};
+    MoonMail.validateConfig(newConfig);
+    this._config = newConfig;
     return this;
   }
 

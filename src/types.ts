@@ -7,7 +7,7 @@ export type Attributes = {
 };
 
 export type Metrics = {
-  [key: string]: number
+  [key: string]: number;
 };
 
 export type UserAttributes = {
@@ -75,6 +75,6 @@ export interface MoonMailPutContactsRequest {
 }
 
 export type Config = {
-  accountId: string;
+  accountId?: string;
   contact?: Contact;
-}
+};

@@ -149,3 +149,13 @@ moonmail.triggerEvent('Auth.OTP', {
   metrics: {logins: 3},
 });
 ```
+
+## Change default contact
+
+You can pass the same parameters to `configure` method as when you initialize MoonMail
+
+This will override default contact
+
+```js
+moonmail.configure({contact: {address: 'email2@example.com', attributes: {foo: 'bar'}}});
+```
