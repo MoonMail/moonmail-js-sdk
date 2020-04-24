@@ -21,7 +21,7 @@ https://js.moonmail.io/sdk/latest/moonmail.umd.js
 ## Intitialize
 
 ```js
-import MoonMail from 'moonmail-js-sdk';
+import {MoonMail} from 'moonmail-js-sdk';
 
 const moonmail = new MoonMail({
   accountId: 'YOUR_ACCOUNT_ID',
