@@ -7,7 +7,7 @@ const API_HOST = 'https://contacts.moonmail.io';
 
 export * from './types';
 
-export default class MoonMail {
+export class MoonMail {
   protected _config: Config = {accountId: ''};
 
   constructor(config: Config) {
@@ -89,3 +89,5 @@ export default class MoonMail {
     return transferKeyToLowerCase(result);
   }
 }
+
+export const init = (config: Config) => new MoonMail(config);
