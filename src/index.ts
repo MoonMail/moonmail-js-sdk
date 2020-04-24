@@ -5,6 +5,8 @@ import {merge, transferKeyToLowerCase, transferKeyToUpperCase} from './utils';
 
 const API_HOST = 'https://contacts.moonmail.io';
 
+export * from './types';
+
 export default class MoonMail {
   protected _config: Config = {accountId: ''};
 
