@@ -1,4 +1,4 @@
-import 'isomorphic-fetch';
+import fetch from 'cross-fetch';
 import {Exception} from './Exception';
 import {Config, Contact, Event} from './types';
 import {merge, transferKeyToLowerCase, transferKeyToUpperCase} from './utils';
