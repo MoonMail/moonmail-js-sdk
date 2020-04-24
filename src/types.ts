@@ -3,35 +3,35 @@ export enum ChannelTypes {
 }
 
 export type Attributes = {
-  [key: string]: string[] | string;
+  [key: string]: string[] | string | null | undefined;
 };
 
 export type Metrics = {
-  [key: string]: number;
+  [key: string]: number | null | undefined;
 };
 
 export type UserAttributes = {
-  [key: string]: string[] | string;
+  [key: string]: string[] | string | null | undefined;
 };
 
 export type Location = {
-  city?: string;
-  country?: string;
-  latitude?: string;
-  longitude?: string;
-  postalCode?: string;
-  region?: string;
+  city?: string | null;
+  country?: string | null;
+  latitude?: string | null;
+  longitude?: number | null;
+  postalCode?: number | null;
+  region?: string | null;
 };
 
 export type Demographic = {
-  make?: string;
-  model?: string;
-  modelVersion?: string;
-  timezone?: string;
-  locale?: string;
-  appVersion?: string;
-  platform?: string;
-  platformVersion?: string;
+  make?: string | null;
+  model?: string | null;
+  modelVersion?: string | null;
+  timezone?: string | null;
+  locale?: string | null;
+  appVersion?: string | null;
+  platform?: string | null;
+  platformVersion?: string | null;
 };
 
 export type Contact = {
@@ -46,15 +46,15 @@ export type Contact = {
 };
 
 export type Session = {
-  id?: string;
-  duration?: number;
-  startTimestamp?: string;
-  stopTimestamp?: string;
+  id?: string | null;
+  duration?: number | null;
+  startTimestamp?: string | null;
+  stopTimestamp?: string | null;
 };
 
 export type Event = {
   eventType: string;
-  timestamp?: string;
+  timestamp?: string | null;
   session?: Session;
   attributes?: Attributes;
   metrics?: Metrics;
