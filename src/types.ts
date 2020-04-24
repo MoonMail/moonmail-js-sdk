@@ -17,9 +17,9 @@ export type UserAttributes = {
 export type Location = {
   city?: string;
   country?: string;
-  latitude?: string;
+  latitude?: number;
   longitude?: number;
-  postalCode?: number;
+  postalCode?: string;
   region?: string;
 };
 
