@@ -159,3 +159,7 @@ This will override default contact
 ```js
 moonmail.configure({contact: {address: 'email2@example.com', attributes: {foo: 'bar'}}});
 ```
+
+## Troubleshoot
+
+Need help? Contact MoonMail's Support team at: support@moonmail.io
