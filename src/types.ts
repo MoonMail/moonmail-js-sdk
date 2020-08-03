@@ -2,6 +2,11 @@ export enum ChannelTypes {
   EMAIL = 'EMAIL',
 }
 
+export enum OptOut {
+  ALL = 'ALL',
+  NONE = 'NONE',
+}
+
 export type Attributes = {
   [key: string]: string[] | string | undefined;
 };
@@ -36,6 +41,7 @@ export type Demographic = {
 
 export type Contact = {
   channel?: ChannelTypes;
+  optOut?: OptOut;
   address?: string;
   userId?: string;
   location?: Location;
