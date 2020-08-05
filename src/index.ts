@@ -56,7 +56,7 @@ export class MoonMail {
   protected _buildContactData(contact?: Contact) {
     let contactData = merge(this._config.contact, contact);
     MoonMail.validateContact(contactData);
-    return transferKeyToUpperCase(contactData, [], ['metrics', 'userAttributes', 'attributes', 'optOut']);
+    return transferKeyToUpperCase(contactData, [], ['metrics', 'userAttributes', 'attributes']);
   }
 
   protected _buildEventData(event: Event | string) {
