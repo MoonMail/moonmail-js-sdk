@@ -51,7 +51,7 @@ const moonmail = new MoonMail({
       region: 'xxxxxx', // The region of the contact location. For example, in the United States, this corresponds to a state.
     },
     metrics: {
-      // Custom metrics that your app reports to Amazon Pinpoint.
+      // Custom metrics that your app reports to MoonMail.
     },
     /** Indicates whether a user has opted out of receiving messages with one of the following values:
      * ALL - User has opted out of all messages.
