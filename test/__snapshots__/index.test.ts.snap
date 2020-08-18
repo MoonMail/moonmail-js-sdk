@@ -1,5 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`sdk should subscribeContact 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "post",
+      "subscribe",
+      Object {
+        "Address": "example_form@example.com",
+        "FormId": "dummy_form_id",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
 exports[`sdk should triggerEvent 1`] = `
 [MockFunction] {
   "calls": Array [

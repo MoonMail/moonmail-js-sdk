@@ -3,7 +3,7 @@ import {Exception} from './Exception';
 import {Config, Contact, Event} from './types';
 import {merge, transferKeyToLowerCase, transferKeyToUpperCase} from './utils';
 
-const API_HOST = 'https://contacts.moonmail.io';
+const API_HOST = 'https://client.moonmail.io';
 
 export * from './types';
 
@@ -86,6 +86,12 @@ export class MoonMail {
     const contactData = this._buildContactData(contact);
     const data = {Contact: contactData, Events: eventsData};
     const result = await this.request('post', 'events', data);
+    return transferKeyToLowerCase(result);
+  }
+
+  async subscribeContact(formId: string, contact?: Contact) {
+    const data = this._buildContactData(contact);
+    const result = await this.request('post', 'subscribe', {...data, FormId: formId});
     return transferKeyToLowerCase(result);
   }
 }

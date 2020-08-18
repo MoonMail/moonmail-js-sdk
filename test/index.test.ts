@@ -20,4 +20,9 @@ describe('sdk', () => {
     mm.triggerEvent({eventType: 'TestEvent', attributes: {foo: 'bar'}, metrics: {count: 1}});
     expect(mm.request).toMatchSnapshot();
   });
+
+  it('should subscribeContact', () => {
+    mm.subscribeContact('dummy_form_id', {address: 'example_form@example.com'});
+    expect(mm.request).toMatchSnapshot();
+  });
 });
